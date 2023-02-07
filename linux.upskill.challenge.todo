@@ -1,0 +1,37 @@
+Linux Upskill Challenge
+https://www.reddit.com/r/linuxupskillchallenge/comments/100xkus/day_0_creating_your_own_server_with_a_5_digital/
+
+Table of Contents TOC
+https://github.com/livialima/linuxupskillchallenge
+
+	☐ Day 2 - Basic navigation:
+		https://github.com/livialima/linuxupskillchallenge/blob/master/02.md
+✔ Day 1 - Get to know your server: @done(23-01-25 20:07)
+	https://github.com/livialima/linuxupskillchallenge/blob/master/01.md
+	✔ Success ssh'ing to the remote machine and testing remote ubuntu linux commands @done(23-01-25 20:07)
+	✔ Success copying local ssh public key to remote machine using the command `ssh-copy-id remoteUser@machine` @done(23-01-25 20:07)
+	✔ After that, success logging in to the remote machine without giving password. But note: @done(23-01-25 20:07)
+		✔ A local bash variable is created to contain the username@remote.ip and use this as argument to ssh @done(23-01-25 20:07)
+			echo $remote_machine 
+			remote_machine="eribertto@64.227.132.149"
+
+✔ Day 0 - Creating Your Own Server - with a $5 Digital Ocean plan @done(23-01-25 18:46)
+https://github.com/livialima/linuxupskillchallenge/blob/master/00-Digital-Ocean.md
+		✔ note the rouota passwd: @done(23-01-25 19:30)
+			e8jPcG+K^3H3ASSw
+	✔ add user eribertto with passwd TYU890))op @done(23-01-25 19:14)
+	✔ add eribertto to groups adm,sudo using the usermod command as root @done(23-01-25 19:19)
+			eribertto@ubuntu-s-1vcpu-1gb-blr1-01:~$ hostnamectl
+			Static hostname: ubuntu-s-1vcpu-1gb-blr1-01
+			Icon name: computer
+			Machine ID: f5a7f5476a48f2816a4d86b163d13231
+			Boot ID: 6fc792562d504f96887fe1c9d19d8324
+			Virtualization: kvm
+			Operating System: Ubuntu 22.10                    
+			Kernel: Linux 5.19.0-23-generic
+			Architecture: x86-64
+			Hardware Vendor: DigitalOcean
+			Hardware Model: Droplet
+			Firmware Version: 20171212
+		✔ disabled root access in droplet using the command: @done(23-01-25 19:24)
+			sudo usermod -p "!" root
